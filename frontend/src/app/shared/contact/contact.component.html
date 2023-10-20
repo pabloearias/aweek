@@ -1,0 +1,46 @@
+<section>
+    <h1>ESCRÍBENOS</h1>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div class="left">
+            <p>
+                <mat-form-field appearance="outline" class="mat-sm">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput id="name" type="text" formControlName="name">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline" class="mat-sm">
+                    <mat-label>E-mail</mat-label>
+                    <input matInput id="email" type="email" formControlName="email">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline" class="mat-sm">
+                    <mat-label>¿Cómo nos encontró?</mat-label>
+                    <mat-select formControlName="note">
+                      <mat-option *ngFor="let option of options" [value]="option.note" >
+                        {{option.note}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </p>
+        </div>
+        <div class="right">
+            <p>
+                <mat-form-field appearance="outline" class="mat-sm">
+                    <mat-label>Asunto</mat-label>
+                    <input matInput id="subject" type="text" formControlName="subject">
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field appearance="outline" class="mat-unsize">
+                    <mat-label>Mensaje</mat-label>
+                    <textarea matInput id="mail" type="text" formControlName="mail"></textarea>
+                  </mat-form-field>
+            </p>
+            <button mat-flat-button type="submit">
+                <p>Enviar</p>
+            </button>
+        </div>
+    </form>
+</section>

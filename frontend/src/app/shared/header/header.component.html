@@ -1,0 +1,95 @@
+<mat-toolbar color="accent">
+  <img src="./assets/logo/Group 12.png" alt="logo-empresa" height="35px">
+    
+  <div>
+    <button mat-button color="primary" >
+      <div>
+        <span>Quienes somos</span>
+        <mat-icon>keyboard_arrow_down</mat-icon>
+      </div>
+    </button>
+
+    <button mat-button color="primary">
+      <div>
+        <span>Nuestro producto</span>
+        <mat-icon>keyboard_arrow_down</mat-icon>
+      </div>
+    </button>
+
+    <button mat-button color="primary">
+      <div>
+        <span>Nuestro mercado</span>
+        <mat-icon>keyboard_arrow_down</mat-icon>
+      </div>
+    </button>
+
+    <button mat-button [matMenuTriggerFor]="management" color="primary">
+      <div>
+        <span>Gestión responsable</span>
+        <mat-icon>keyboard_arrow_down</mat-icon>
+      </div>
+    </button>
+    <mat-menu #management="matMenu" class="management">
+      <button mat-menu-item>
+        <div>
+          <span>Nuestra empresa</span>
+        </div>
+      </button>
+      <button mat-menu-item [matMenuTriggerFor]="history">
+        <div>
+          <span>Historia</span>
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </div>
+      </button>
+      <button mat-menu-item>
+        <div>
+          <span>Organigrama</span>
+        </div>
+      </button>
+      <button mat-menu-item>
+        <div>
+          <span>Misión y Visión</span>
+        </div>
+      </button>
+      <button mat-menu-item [matMenuTriggerFor]="rrhh">
+        <div>
+          <span>Talento humano</span>
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </div>
+      </button>
+      <button mat-menu-item>
+        <div>
+          <span>Premios</span>
+        </div>
+      </button>
+      <button mat-menu-item>
+        <div>
+          <span>Certificaciones</span>
+        </div>
+      </button>
+      <button mat-menu-item>
+        <div>
+          <span>Cultura y Sistema de Gestión</span>
+        </div>
+      </button>
+    </mat-menu>
+
+    <mat-menu #history="matMenu"  yPosition="below">
+      <button mat-menu-item>Historia 1</button>
+      <button mat-menu-item>Historia 2</button>
+    </mat-menu>
+
+    <mat-menu #rrhh="matMenu" color="primary" >
+      <button mat-menu-item>Reclutamiento</button>
+      <button mat-menu-item>Convocatorias RRHH</button>
+    </mat-menu>
+
+    <button mat-button color="primary" >
+      <span>Noticias</span>
+    </button>
+
+    <button mat-button color="primary">
+      <span>ES</span>
+    </button>
+  </div>
+</mat-toolbar>

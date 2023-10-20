@@ -1,0 +1,86 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+$my-primary-color: (
+    50 : #f3ffe5,
+    100 : #e2febd,
+    200 : #cffe91,
+    300 : #bbfd65,
+    400 : #adfc44,
+    500 : #9efc23,
+    600 : #96fc1f,
+    700 : #8cfb1a,
+    800 : #82fb15,
+    900 : #70fa0c,
+    A100 : #ffffff,
+    A200 : #f6fff1,
+    A400 : #d6ffbe,
+    A700 : #c7ffa4,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$my-accent-color: (
+    50 : #e4e6e1,
+    100 : #bbc1b3,
+    200 : #8e9880,
+    300 : #606e4d,
+    400 : #3e4f27,
+    500 : #1c3001,
+    600 : #192b01,
+    700 : #142401,
+    800 : #111e01,
+    900 : #091300,
+    A100 : #8dff54,
+    A200 : #6bff21,
+    A400 : #4fed00,
+    A700 : #47d400,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+//warn
+
+$angulartest-primary: mat.define-palette($my-primary-color);
+$angulartest-accent: mat.define-palette($my-accent-color);
+
+// The warn palette is optional (defaults to red).  
+$angulartest-warn: mat.define-palette(mat.$red-palette);
+
+
+$angulartest-theme: mat.define-light-theme((
+  color: (
+    primary: $angulartest-primary,
+    accent: $angulartest-accent,
+    warn: $angulartest-warn,
+  )
+));
+
+@include mat.all-component-themes($angulartest-theme);
